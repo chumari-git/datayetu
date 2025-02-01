@@ -1,5 +1,11 @@
 from fasthtml.common import *
 from monsterui.all import *
+import pandas as pd
+import plotly.graph_objects as go
+import plotly.express as px
+
+
+df = pd.read_csv('/src/KE-population-density.csv')
 
 # Create the FastHTML app
 app, rt = fast_app(
@@ -38,8 +44,10 @@ def layout(content):
     )
 )
 
-# def map_of_kenya(): -> None
-# 	# fig = px.choropleth_mapbox
+def map_of_kenya():
+	fig = px.choropleth(
+
+    )
 
 # Define a simple route
 @rt("/")
